@@ -2,7 +2,7 @@
  * Created by vinayduvvada on 4/24/16.
  */
 (function() {
-    angular.module('routerApp', ['routerRoutes'])
+    angular.module('routerApp', ['routerRoutes','ngAnimate'])
         // create the controllers
         // this will be the controller for the ENTIRE site
         .controller('mainController', function () {
