@@ -3,13 +3,15 @@
  */
 (function() {
     angular.module('userApp', [
-        //ngAnimate to add animations to all of our Angular directives (specifically ngShow/ngHide)
         'ngAnimate',
-        //app.routes will be the routing for our application
         'app.routes',
         'authService',
         'mainCtrl',
         'userCtrl',
         'userService'
-    ]);
+    ])
+        .config(function($httpProvider) {
+        // attach our auth interceptor to the http requests
+        $httpProvider.interceptors.push('AuthInterceptor');
+    });
 })();

@@ -15,9 +15,10 @@
                 vm.loggedIn = Auth.isLoggedIn();
 
                 // get user information on route change
-                Auth.getUser().success(function (data) {
-                    vm.user = data;
-                });
+                Auth.getUser()
+                    .success(function (data) {
+                        vm.user = data;
+                    });
             });
 
             // function to handle login form
